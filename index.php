@@ -6,12 +6,19 @@
  * 3. Déployez sur votre serveur et testez !
  */
 
-$from = '';
-$to = '';
+$from = 'azxki01@gmail.com';
+$to = 'coursancoco@gmail.com';
+$subject = 'Un mail';
 $message = 'Hello World, sending a simple mail !';
 // TODO Votre code ici.
 
+$headers = array(
+    'From' => $from,
+    'Reply-To' => $to,
+    'X-Mailer' => 'PHP/' . phpversion()
+);
 
+mail($to, $subject, $message);
 /**
  * 4. Commentez le code précédent, mais gardez les variables $from et $to
  * 5. Définissez un message long d'au moins 120 caractères au choix.
